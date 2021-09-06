@@ -1,0 +1,15 @@
+<div class="card">
+    <img [src]="heroeInput.img" class="card-img-top" [alt]="heroeInput.nombre">
+    <div class="card-body">
+        <h5 class="card-title">
+            {{ heroeInput.nombre }}
+        </h5>
+        <p class="card-text">
+            {{ heroeInput.bio }}
+        </p>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" (click)="devolverHeroe()">Ver héroe</button>
+            <!-- <a [routerLink]="['/ver-heroe', heroeInput.id]" class="btn btn-danger" type="button">Ver más</a> -->
+        </div>
+    </div>
+</div>

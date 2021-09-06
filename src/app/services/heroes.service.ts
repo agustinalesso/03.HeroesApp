@@ -84,6 +84,12 @@ export class HeroesService {
 
   }
 
+  buscarHeroe(terminoBusqueda : string){
+    let heroes : HeroeModel[] = [];
+    heroes = this.obtenerHeroes().filter(heroes => heroes.nombre?.toLocaleLowerCase().includes(terminoBusqueda.toLocaleLowerCase()))
+    return heroes;
+  }
+
 }
 
 export interface HeroeModel {
